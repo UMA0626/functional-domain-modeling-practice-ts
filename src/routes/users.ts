@@ -1,0 +1,1 @@
+// JSONボディ検証 + TaskEither
