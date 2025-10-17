@@ -1,7 +1,7 @@
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
 import { registerHealthRoutes } from './routes/health.js'
-import { registerPlaceOrderRoutes } from './routes/placeOrder.js'
+import { placeOrderRoutes } from './routes/place-order.js'
 
 const app = new Hono()
 
@@ -10,7 +10,7 @@ app.get('/', (c) => {
 })
 
 registerHealthRoutes(app)
-registerPlaceOrderRoutes(app)
+placeOrderRoutes(app)
 serve({
   fetch: app.fetch,
   port: 3000
